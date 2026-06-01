@@ -1,0 +1,6 @@
+.venv/
+rs_env/
+__pycache__/
+.DS_Store
+src/data/
+results/checkpoints/*.pth

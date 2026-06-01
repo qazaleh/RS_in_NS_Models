@@ -1,0 +1,32 @@
+{
+    "baseline_cnn": {
+        "reasoning_accuracy": 0.9754,
+        "reasoning_correct": 4877,
+        "reasoning_total": 5000,
+        "concept_accuracy": 0.9729,
+        "concept_correct": 9729,
+        "concept_total": 10000,
+        "shortcut_count": 143,
+        "shortcut_frequency": 0.0286,
+        "shortcut_rate_given_correct": 0.02932130408037728
+    },
+    "uncertainty_weighted_residual_filter_lambda_0.2": {
+        "reasoning_accuracy": 0.9794,
+        "reasoning_correct": 4897,
+        "reasoning_total": 5000,
+        "concept_accuracy": 0.979,
+        "concept_correct": 9790,
+        "concept_total": 10000,
+        "shortcut_count": 105,
+        "shortcut_frequency": 0.021,
+        "shortcut_rate_given_correct": 0.02144169899938738
+    },
+    "filter_change_analysis": {
+        "fixed_cases": 101,
+        "broken_cases": 43,
+        "unchanged_correct": 4691,
+        "unchanged_wrong": 165,
+        "total": 5000,
+        "net_gain": 58
+    }
+}
