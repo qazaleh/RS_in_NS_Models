@@ -2,9 +2,21 @@
 
 This project studies reasoning shortcuts in a simple neuro-symbolic model using paired MNIST digit images.
 
-A convolutional neural network predicts two digit concepts from a paired image input. A symbolic reasoning rule then computes whether the sum of the predicted digits is even or odd.
+A convolutional neural network predicts two digit concepts from a paired image input. A symbolic reasoning rule then computes whether the sum of the two predicted digits is even or odd.
 
 A reasoning shortcut occurs when the final reasoning output is correct, but one or both predicted digit concepts are wrong.
+
+## Dashboard Preview
+
+![Dashboard Preview](assets/dashboard_preview.png)
+
+The project includes an interactive Streamlit dashboard for exploring MNIST image pairs, CNN predictions, filtered predictions, symbolic reasoning outputs, confidence scores, and shortcut status.
+
+Run it with:
+
+```bash
+streamlit run dashboard.py
+```
 
 ## Project Goal
 
@@ -36,6 +48,9 @@ Main findings:
 
 ```text
 RS_in_NS_Models/
+├── assets/
+│   └── dashboard_preview.png
+│
 ├── src/
 │   ├── dataset.py
 │   ├── models.py
@@ -53,6 +68,7 @@ RS_in_NS_Models/
 │   ├── metrics/
 │   └── figures/
 │
+├── dashboard.py
 ├── requirements.txt
 └── README.md
 ```
@@ -74,7 +90,7 @@ pip install -r requirements.txt
 
 ## How to Run
 
-Run all commands from the `src/` directory:
+Train and analysis scripts are run from the `src/` directory:
 
 ```bash
 cd src
@@ -110,6 +126,12 @@ Generate result figures:
 python visualizer.py
 ```
 
+Run the dashboard from the project root:
+
+```bash
+streamlit run dashboard.py
+```
+
 ## Main Files
 
 ### `dataset.py`
@@ -143,6 +165,10 @@ Collects shortcut cases and saves concept/confidence-level analysis data.
 ### `visualizer.py`
 
 Generates final result and explainability figures.
+
+### `dashboard.py`
+
+Provides an interactive Streamlit dashboard for exploring predictions and shortcut behavior.
 
 ## References
 
